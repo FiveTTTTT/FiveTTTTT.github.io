@@ -66,7 +66,12 @@ select {
     }
 }
 
+body {
+    background-color: antiquewhite;
+}
+
 h1 {
+    color: brown;
     margin-bottom: 56px;
     text-align: center;
     letter-spacing: 4px;
@@ -74,6 +79,7 @@ h1 {
 }
 
 h2 {
+    color: brown;
     font-size: 36px;
     margin-bottom: 4px;
     font-family: sans-serif;
@@ -84,6 +90,7 @@ h2 {
 }
 
 h3 {
+    color: brown;
     font-size: 24px;
     margin-bottom: 4px;
     line-height: 1.6;
@@ -91,5 +98,6 @@ h3 {
 }
 
 p {
+    color: brown;
     font-size: 18px;
 }

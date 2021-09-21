@@ -66,25 +66,33 @@ select {
     }
 }
 
+body {
+    background-color: lightcyan;
+}
+
 h1 {
     font-size: 84px;
     text-align: center;
     font-weight: normal;
     letter-spacing: -2px;
     margin-bottom: 32px;
+    color: red;
 }
 
 h2 {
     font-size: 36px;
     margin-bottom: 4px;
+    color: green;
 }
 
 h3 {
+    color: blue;
     font-size: 24px;
     margin-bottom: 4px;
 }
 
 p {
+    color: darkslateblue;
     font-family: sans-serif;
     line-height: 1.6;
     margin-bottom: 20px;

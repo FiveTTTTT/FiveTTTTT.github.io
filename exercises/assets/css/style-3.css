@@ -66,7 +66,12 @@ select {
     }
 }
 
+body {
+    background-color: purple
+}
+
 h1 {
+    color: white;
     font-size: 84px;
     text-align: center;
     font-weight: normal;
@@ -74,6 +79,7 @@ h1 {
 }
 
 h2 {
+    color: white;
     font-size: 36px;
     margin-bottom: 4px;
     text-transform: uppercase;
@@ -85,8 +91,13 @@ h3 {
 }
 
 p {
+    color: white;
     font-size: 18px;
     font-family: sans-serif;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+a {
+    color: white
 }
