@@ -76,7 +76,8 @@ body {
 /* Main heading */
 h1 {
     font-family: 'Merriweather', serif;
-    font-size: 84px;
+    /* font-size: 84px; */
+    font-size: calc(48px + (84 - 48) * ((100vw - 320px) / (1600 - 320)));  
     line-height: 1.1;
     font-weight: normal;
     color: #3434B0;
