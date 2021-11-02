@@ -1,0 +1,22 @@
+{
+  "name": "fivettttt.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch assets/sass/global.scss assets/css/global.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FiveTTTTT/fivettttt.github.io.git"
+  },
+  "author": "Theodore Cadet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FiveTTTTT/fivettttt.github.io/issues"
+  },
+  "homepage": "https://github.com/FiveTTTTT/fivettttt.github.io#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
