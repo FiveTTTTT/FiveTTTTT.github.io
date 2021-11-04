@@ -1,3 +1,161 @@
+#mainIndex #mainSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#mainIndex #mainSection #cvPresId,
+#mainIndex #mainSection #projectsId {
+  width: 40%;
+}
+#mainIndex #mainSection #cvPresId button,
+#mainIndex #mainSection #projectsId button {
+  height: 40vh;
+  width: 100%;
+  background-color: #081f30;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: #000 3px 4px 0px 0px;
+  background: linear-gradient(#081f30 5%, #334757 100%) #081f30;
+  border-radius: 15px;
+  border: 1 px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7 px 25 px;
+  text-decoration: none;
+  text-shadow: #e1e2ed 0px 1px 0px;
+}
+#mainIndex #mainSection #cvPresId button h3,
+#mainIndex #mainSection #projectsId button h3 {
+  margin: 0;
+  color: #f0a500;
+}
+#mainIndex #mainSection #cvPresId button:hover,
+#mainIndex #mainSection #projectsId button:hover {
+  background: linear-gradient(#334757 5%, #081f30 100%) #334757;
+}
+
+header#headerIndex {
+  width: 100%;
+  height: 45vh;
+  padding: 4% 20%;
+  margin-bottom: 30px;
+  background: linear-gradient(#061623 0%, #597c97 100%);
+  background-size: 200% 200%;
+  animation: animatedBg 5s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes animatedBg {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 80% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+header#headerIndex h1,
+header#headerIndex h2 {
+  color: #f0a500;
+}
+header#headerIndex #headerHead {
+  position: inherit;
+  z-index: 2;
+}
+header#headerIndex #hexagomBg {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 1;
+}
+header#headerIndex #hexagomBg #hexagonId,
+header#headerIndex #hexagomBg #hexagonIdSide {
+  display: flex;
+  margin-bottom: -19px;
+}
+header#headerIndex #hexagomBg #hexagonId div,
+header#headerIndex #hexagomBg #hexagonIdSide div {
+  display: flex;
+  justify-content: space-between;
+}
+header#headerIndex #hexagomBg #hexagonId div .hexagon,
+header#headerIndex #hexagomBg #hexagonIdSide div .hexagon {
+  position: relative;
+  width: 60px;
+  height: 34.64px;
+  background-color: transparent;
+  margin: 17.32px 0;
+  border-left: solid 5px black;
+  border-right: solid 5px black;
+}
+header#headerIndex #hexagomBg #hexagonId div .hexagon:before,
+header#headerIndex #hexagomBg #hexagonId div .hexagon:after,
+header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:before,
+header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 42.43px;
+  height: 42.43px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: inherit;
+  left: 3.7868px;
+}
+header#headerIndex #hexagomBg #hexagonId div .hexagon:before,
+header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:before {
+  top: -21.2132px;
+  border-top: solid 7.0711px black;
+  border-right: solid 7.0711px black;
+}
+header#headerIndex #hexagomBg #hexagonId div .hexagon:after,
+header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:after {
+  bottom: -21.2132px;
+  border-bottom: solid 7.0711px black;
+  border-left: solid 7.0711px black;
+}
+header#headerIndex #hexagomBg #hexagonIdSide {
+  margin-left: -30px;
+}
+
+#mainProjects {
+  padding: 0 10%;
+}
+#mainProjects #schoolProjetcs,
+#mainProjects #myProjetcs,
+#mainProjects #otherProjetcs {
+  text-align: start;
+}
+#mainProjects #schoolProjetcs hr,
+#mainProjects #myProjetcs hr,
+#mainProjects #otherProjetcs hr {
+  border: inset;
+  margin-bottom: 20px;
+}
+#mainProjects #schoolProjetcs h2,
+#mainProjects #myProjetcs h2,
+#mainProjects #otherProjetcs h2 {
+  width: 100%;
+  margin: 60px 0 30px;
+}
+#mainProjects #schoolProjetcs ul,
+#mainProjects #myProjetcs ul,
+#mainProjects #otherProjetcs ul {
+  list-style: none;
+  width: 80%;
+  margin: auto;
+}
+#mainProjects #schoolProjetcs ul a,
+#mainProjects #myProjetcs ul a,
+#mainProjects #otherProjetcs ul a {
+  color: #f0a500;
+}
+
 /*  ============= WEB BROWSER RESETS ============ */
 * {
   margin: 0;
@@ -93,131 +251,6 @@ h3 {
 p {
   font-size: 20px;
   margin-bottom: 16px;
-}
-
-#mainSection {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-#mainSection #cvPresId,
-#mainSection #projectsId {
-  width: 40%;
-}
-#mainSection #cvPresId button,
-#mainSection #projectsId button {
-  height: 40vh;
-  width: 100%;
-  background-color: #081f30;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: #000 3px 4px 0px 0px;
-  background: linear-gradient(#081f30 5%, #334757 100%) #081f30;
-  border-radius: 15px;
-  border: 1 px solid #d6bcd6;
-  display: inline-block;
-  cursor: pointer;
-  font-family: Arial;
-  font-size: 17px;
-  padding: 7 px 25 px;
-  text-decoration: none;
-  text-shadow: #e1e2ed 0px 1px 0px;
-}
-#mainSection #cvPresId button h3,
-#mainSection #projectsId button h3 {
-  margin: 0;
-  color: #f0a500;
-}
-#mainSection #cvPresId button:hover,
-#mainSection #projectsId button:hover {
-  background: linear-gradient(#334757 5%, #081f30 100%) #334757;
-}
-
-header {
-  width: 100%;
-  height: 45vh;
-  padding: 4% 20%;
-  margin-bottom: 30px;
-  background: linear-gradient(#061623 0%, #597c97 100%);
-  background-size: 200% 200%;
-  animation: animatedBg 5s ease infinite;
-  position: relative;
-  overflow: hidden;
-}
-@keyframes animatedBg {
-  0% {
-    background-position: 10% 0%;
-  }
-  50% {
-    background-position: 80% 100%;
-  }
-  100% {
-    background-position: 10% 0%;
-  }
-}
-header h1,
-header h2 {
-  color: #f0a500;
-}
-header #headerHead {
-  position: inherit;
-  z-index: 2;
-}
-header #hexagomBg {
-  position: absolute;
-  top: -5%;
-  left: 0;
-  z-index: 1;
-}
-header #hexagomBg #hexagonId,
-header #hexagomBg #hexagonIdSide {
-  display: flex;
-  margin-bottom: -19px;
-}
-header #hexagomBg #hexagonId div,
-header #hexagomBg #hexagonIdSide div {
-  display: flex;
-  justify-content: space-between;
-}
-header #hexagomBg #hexagonId div .hexagon,
-header #hexagomBg #hexagonIdSide div .hexagon {
-  position: relative;
-  width: 60px;
-  height: 34.64px;
-  background-color: transparent;
-  margin: 17.32px 0;
-  border-left: solid 5px black;
-  border-right: solid 5px black;
-}
-header #hexagomBg #hexagonId div .hexagon:before,
-header #hexagomBg #hexagonId div .hexagon:after,
-header #hexagomBg #hexagonIdSide div .hexagon:before,
-header #hexagomBg #hexagonIdSide div .hexagon:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  width: 42.43px;
-  height: 42.43px;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background-color: inherit;
-  left: 3.7868px;
-}
-header #hexagomBg #hexagonId div .hexagon:before,
-header #hexagomBg #hexagonIdSide div .hexagon:before {
-  top: -21.2132px;
-  border-top: solid 7.0711px black;
-  border-right: solid 7.0711px black;
-}
-header #hexagomBg #hexagonId div .hexagon:after,
-header #hexagomBg #hexagonIdSide div .hexagon:after {
-  bottom: -21.2132px;
-  border-bottom: solid 7.0711px black;
-  border-left: solid 7.0711px black;
-}
-header #hexagomBg #hexagonIdSide {
-  margin-left: -30px;
 }
 
 /*# sourceMappingURL=global.css.map */
