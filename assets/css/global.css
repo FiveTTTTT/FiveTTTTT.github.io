@@ -220,7 +220,6 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #mainProjects #schoolProjetcs ul,
 #mainProjects #myProjetcs ul,
 #mainProjects #otherProjetcs ul {
-  list-style: url("../img/hexagone.png");
   width: 80%;
   margin: auto;
 }
@@ -228,6 +227,94 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #mainProjects #myProjetcs ul a,
 #mainProjects #otherProjetcs ul a {
   color: #f0a500;
+}
+
+#bodyCv {
+  position: relative;
+}
+#bodyCv #mainCv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+#bodyCv #mainCv #finishLoad {
+  background-color: #081f30;
+  height: 30vh;
+  border-radius: 10px;
+  padding: 20px 40px;
+  animation: 5s ease-in 0s 1 hideTxt, 1s ease-in 5s 1 showTxt;
+  opacity: 1;
+}
+#bodyCv #mainCv .loading {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+#bodyCv #mainCv .loading h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  animation: animateTxt 2s ease-in-out;
+  animation-iteration-count: 3;
+  animation-delay: -1s;
+}
+#bodyCv #mainCv .loading .blocks {
+  position: absolute;
+  width: 8px;
+  height: 25px;
+  background: #061623;
+  left: 50%;
+  border-radius: 8px;
+  transform: rotate(calc(18deg * var(--i)));
+  transform-origin: 0 125px;
+  animation: animate 1.9s ease-in-out;
+  animation-iteration-count: 2;
+  animation-delay: calc(0.05s * var(--i));
+}
+@keyframes animate {
+  0%, 50% {
+    background: #061623;
+    box-shadow: none;
+  }
+  50.1%, 100% {
+    background: #f0a500;
+    box-shadow: 0 0 5px #f0a500, 0 0 15px #f0a500, 0 0 30px #f0a500, 0 0 60px #f0a500, 0 0 90px #f0a500;
+  }
+}
+@keyframes animateTxt {
+  0%, 50% {
+    color: #061623;
+    text-shadow: none;
+  }
+  50.1%, 100% {
+    color: #f0a500;
+    text-shadow: 0 0 5px #f0a500, 0 0 15px #f0a500, 0 0 30px #f0a500, 0 0 60px #f0a500, 0 0 90px #f0a500;
+  }
+}
+@keyframes hideTxt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes showTxt {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#bodyCv footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 /*  ============= WEB BROWSER RESETS ============ */
@@ -345,6 +432,10 @@ footer svg:hover g :nth-child(3) {
 }
 footer article {
   width: 30%;
+}
+footer article h4 {
+  text-decoration: underline;
+  margin-bottom: 15px;
 }
 footer article h4,
 footer article li {
