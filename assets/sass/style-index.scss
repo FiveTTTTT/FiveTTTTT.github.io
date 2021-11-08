@@ -1,53 +1,6 @@
 @import "variables.scss";
 
-#mainIndex {
-    #mainSection {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
 
-        #cvPresId,
-        #projectsId {
-            width: 40%;
-
-            #cvPresIdForm {}
-
-            #projectsIdForm {}
-
-            button {
-                height: 40vh;
-                width: 100%;
-                background-color: $colorBalise;
-                padding: 10px;
-                border-radius: 10px;
-
-                box-shadow: #000 3px 4px 0px 0px;
-                background: linear-gradient($colorBalise 5%, $colorBg 100%) $colorBalise;
-                border-radius: 15px;
-                border: 1 px solid rgb(214, 188, 214);
-                display: inline-block;
-                cursor: pointer;
-                font-family: Arial;
-                font-size: 17px;
-                padding: 7 px 25 px;
-                text-decoration: none;
-                text-shadow: rgb(225 226 237) 0px 1px 0px;
-
-                h3 {
-                    margin: 0;
-                    color: $colorTxt;
-                }
-            }
-
-            button:hover {
-                background: linear-gradient($colorBg 5%, $colorBalise 100%) $colorBg;
-
-            }
-
-        }
-    }
-
-}
 
 header#headerIndex {
     width: 100%;
@@ -75,6 +28,7 @@ header#headerIndex {
     h1,
     h2 {
         color: $colorTxt;
+        text-shadow: 1px 1px 2px $colorBaliseDark;
     }
 
     position: relative;
@@ -94,7 +48,7 @@ header#headerIndex {
         #hexagonId,
         #hexagonIdSide {
             display: flex;
-            margin-bottom: -19px;
+            margin-bottom: -18px;
 
             div {
                 display: flex;
@@ -106,9 +60,24 @@ header#headerIndex {
                     height: 34.64px;
                     background-color: transparent;
                     margin: 17.32px 0;
-                    border-left: solid 5px black;
-                    border-right: solid 5px black;
+                    border-left: solid 5px $colorTxtHigh;
+                    border-right: solid 5px $colorTxtLow;
                 }
+
+                // .hexagon:hover {
+                //     border-left: solid 5px red;
+                //     border-right: solid 5px red;
+
+                //     ::before:hover {
+                //         border-top: solid 7.0711px red;
+                //         border-right: solid 7.0711px red;
+                //     }
+
+                //     ::after:hover {
+                //         border-bottom: solid 7.0711px red;
+                //         border-left: solid 7.0711px red;
+                //     }
+                // }
 
                 .hexagon:before,
                 .hexagon:after {
@@ -126,14 +95,14 @@ header#headerIndex {
 
                 .hexagon:before {
                     top: -21.2132px;
-                    border-top: solid 7.0711px black;
-                    border-right: solid 7.0711px black;
+                    border-top: solid 7.0711px $colorTxtHigh;
+                    border-right: solid 7.0711px $colorTxtLow;
                 }
 
                 .hexagon:after {
                     bottom: -21.2132px;
-                    border-bottom: solid 7.0711px black;
-                    border-left: solid 7.0711px black;
+                    border-bottom: solid 7.0711px $colorTxtLow;
+                    border-left: solid 7.0711px $colorTxtHigh;
                 }
 
             }
@@ -142,9 +111,144 @@ header#headerIndex {
         }
 
         #hexagonIdSide {
-            margin-left: -30px;
+            margin-left: -29px;
         }
 
+    }
+
+}
+
+#mainIndex {
+    #mainSection {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+
+        #cvPresId,
+        #projectsId {
+            width: 40%;
+
+            #cvPresIdForm {}
+
+            #projectsIdForm {}
+
+            button {
+                height: 40vh;
+                width: 100%;
+                // padding: 10px;
+                background-color: rgba(0, 0, 0, 0);
+                display: inline-block;
+                cursor: pointer;
+                font-family: Arial;
+                font-size: 17px;
+                padding: 7px 25px;
+                text-decoration: none;
+                text-shadow: rgb(225 226 237) 0px 1px 0px;
+
+                h3 {
+                    margin: 0;
+                    color: $colorTxt;
+                }
+            }
+
+        }
+    }
+
+}
+
+// tutorial https://www.youtube.com/watch?v=1zFlSLD01Uw&ab_channel=OnlineTutorials
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+
+    .box {
+        position: relative;
+        color: $colorTxt;
+        background: $colorBalise;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 30px;
+        transition: 0.5s;
+
+        span {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            right: 6px;
+            bottom: 6px;
+            background: rgba(8, 31, 48, 0.6);
+            z-index: 2;
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: rgba(8, 31, 48, 0.1);
+            pointer-events: none;
+
+        }
+
+        .content {
+            position: relative;
+            z-index: 10;
+            padding: 20px 40px;
+        }
+
+    }
+
+    .box:hover {
+        transform: translateY(-20px);
+    }
+
+    .box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $colorGradBright;
+    }
+
+    .box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $colorGradBright;
+        filter: blur(30px);
+    }
+
+    .box:nth-child(2)::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $colorGradBrightReverse;
+    }
+
+    .box:nth-child(2)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $colorGradBrightReverse;
+        filter: blur(30px);
     }
 
 }

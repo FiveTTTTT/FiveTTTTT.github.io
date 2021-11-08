@@ -1,41 +1,3 @@
-#mainIndex #mainSection {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-}
-#mainIndex #mainSection #cvPresId,
-#mainIndex #mainSection #projectsId {
-  width: 40%;
-}
-#mainIndex #mainSection #cvPresId button,
-#mainIndex #mainSection #projectsId button {
-  height: 40vh;
-  width: 100%;
-  background-color: #081f30;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: #000 3px 4px 0px 0px;
-  background: linear-gradient(#081f30 5%, #334757 100%) #081f30;
-  border-radius: 15px;
-  border: 1 px solid #d6bcd6;
-  display: inline-block;
-  cursor: pointer;
-  font-family: Arial;
-  font-size: 17px;
-  padding: 7 px 25 px;
-  text-decoration: none;
-  text-shadow: #e1e2ed 0px 1px 0px;
-}
-#mainIndex #mainSection #cvPresId button h3,
-#mainIndex #mainSection #projectsId button h3 {
-  margin: 0;
-  color: #f0a500;
-}
-#mainIndex #mainSection #cvPresId button:hover,
-#mainIndex #mainSection #projectsId button:hover {
-  background: linear-gradient(#334757 5%, #081f30 100%) #334757;
-}
-
 header#headerIndex {
   width: 100%;
   height: 45vh;
@@ -61,6 +23,7 @@ header#headerIndex {
 header#headerIndex h1,
 header#headerIndex h2 {
   color: #f0a500;
+  text-shadow: 1px 1px 2px #061623;
 }
 header#headerIndex #headerHead {
   position: inherit;
@@ -75,7 +38,7 @@ header#headerIndex #hexagomBg {
 header#headerIndex #hexagomBg #hexagonId,
 header#headerIndex #hexagomBg #hexagonIdSide {
   display: flex;
-  margin-bottom: -19px;
+  margin-bottom: -18px;
 }
 header#headerIndex #hexagomBg #hexagonId div,
 header#headerIndex #hexagomBg #hexagonIdSide div {
@@ -89,8 +52,8 @@ header#headerIndex #hexagomBg #hexagonIdSide div .hexagon {
   height: 34.64px;
   background-color: transparent;
   margin: 17.32px 0;
-  border-left: solid 5px black;
-  border-right: solid 5px black;
+  border-left: solid 5px #0040f0;
+  border-right: solid 5px #f05000;
 }
 header#headerIndex #hexagomBg #hexagonId div .hexagon:before,
 header#headerIndex #hexagomBg #hexagonId div .hexagon:after,
@@ -110,17 +73,128 @@ header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:after {
 header#headerIndex #hexagomBg #hexagonId div .hexagon:before,
 header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:before {
   top: -21.2132px;
-  border-top: solid 7.0711px black;
-  border-right: solid 7.0711px black;
+  border-top: solid 7.0711px #0040f0;
+  border-right: solid 7.0711px #f05000;
 }
 header#headerIndex #hexagomBg #hexagonId div .hexagon:after,
 header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:after {
   bottom: -21.2132px;
-  border-bottom: solid 7.0711px black;
-  border-left: solid 7.0711px black;
+  border-bottom: solid 7.0711px #f05000;
+  border-left: solid 7.0711px #0040f0;
 }
 header#headerIndex #hexagomBg #hexagonIdSide {
-  margin-left: -30px;
+  margin-left: -29px;
+}
+
+#mainIndex #mainSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+#mainIndex #mainSection #cvPresId,
+#mainIndex #mainSection #projectsId {
+  width: 40%;
+}
+#mainIndex #mainSection #cvPresId button,
+#mainIndex #mainSection #projectsId button {
+  height: 40vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: #e1e2ed 0px 1px 0px;
+}
+#mainIndex #mainSection #cvPresId button h3,
+#mainIndex #mainSection #projectsId button h3 {
+  margin: 0;
+  color: #f0a500;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+.container .box {
+  position: relative;
+  color: #f0a500;
+  background: #081f30;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 30px;
+  transition: 0.5s;
+}
+.container .box span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: rgba(8, 31, 48, 0.6);
+  z-index: 2;
+}
+.container .box span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(8, 31, 48, 0.1);
+  pointer-events: none;
+}
+.container .box .content {
+  position: relative;
+  z-index: 10;
+  padding: 20px 40px;
+}
+.container .box:hover {
+  transform: translateY(-20px);
+}
+.container .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0040f0 0%, #f05000 100%);
+}
+.container .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0040f0 0%, #f05000 100%);
+  filter: blur(30px);
+}
+.container .box:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(280deg, #0040f0 0%, #f05000 100%);
+}
+.container .box:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(280deg, #0040f0 0%, #f05000 100%);
+  filter: blur(30px);
 }
 
 #mainProjects {
@@ -146,7 +220,7 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #mainProjects #schoolProjetcs ul,
 #mainProjects #myProjetcs ul,
 #mainProjects #otherProjetcs ul {
-  list-style: none;
+  list-style: url("../img/hexagone.png");
   width: 80%;
   margin: auto;
 }
@@ -251,6 +325,41 @@ h3 {
 p {
   font-size: 20px;
   margin-bottom: 16px;
+}
+
+footer {
+  background-color: #081f30;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 20vh;
+}
+footer svg g text {
+  transition: 0.5s;
+}
+footer svg g :nth-child(2) {
+  transition: 0.5s;
+}
+footer svg:hover g :nth-child(3) {
+  text-shadow: 0 0 9px #f0a500;
+}
+footer article {
+  width: 30%;
+}
+footer article h4,
+footer article li {
+  color: #f0a500;
+  text-align: start;
+}
+footer article h4 a,
+footer article li a {
+  color: #f0a500;
+}
+footer article ul {
+  list-style: none;
+}
+footer article img {
+  width: 10%;
 }
 
 /*# sourceMappingURL=global.css.map */
