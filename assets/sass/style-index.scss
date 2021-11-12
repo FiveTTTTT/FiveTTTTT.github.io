@@ -34,6 +34,10 @@ header#headerIndex {
     position: relative;
     overflow: hidden;
 
+    #headerMenu {
+        display: none;
+    }
+
     #headerHead {
         position: inherit;
         z-index: 2;
@@ -60,8 +64,8 @@ header#headerIndex {
                     height: 34.64px;
                     background-color: transparent;
                     margin: 17.32px 0;
-                    border-left: solid 5px $colorTxtHigh;
-                    border-right: solid 5px $colorTxtLow;
+                    border-left: solid 5px $colorDark;
+                    border-right: solid 5px $colorDark;
                 }
 
                 // .hexagon:hover {
@@ -95,14 +99,14 @@ header#headerIndex {
 
                 .hexagon:before {
                     top: -21.2132px;
-                    border-top: solid 7.0711px $colorTxtHigh;
-                    border-right: solid 7.0711px $colorTxtLow;
+                    border-top: solid 7.0711px $colorDark;
+                    border-right: solid 7.0711px $colorDark;
                 }
 
                 .hexagon:after {
                     bottom: -21.2132px;
-                    border-bottom: solid 7.0711px $colorTxtLow;
-                    border-left: solid 7.0711px $colorTxtHigh;
+                    border-bottom: solid 7.0711px $colorDark;
+                    border-left: solid 7.0711px $colorDark;
                 }
 
             }
@@ -121,6 +125,7 @@ header#headerIndex {
 #mainIndex {
     #mainSection {
         display: flex;
+        flex-wrap: wrap;
         width: 100%;
         justify-content: space-evenly;
 
@@ -251,4 +256,49 @@ header#headerIndex {
         filter: blur(30px);
     }
 
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 0;
+    }
+
+    header#headerIndex {
+        padding: 0;
+        animation: none;
+
+        #headerMenu {
+            display: block;
+            position: fixed;
+            width: 100%;
+            z-index: 11;
+            padding: 2% 5%;
+            background-color: $colorBalise;
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                a {
+                    color: $colorTxt;
+                }
+            }
+        }
+        #headerHead{
+            margin-top: 22%;
+        }
+    }
+
+    #mainIndex {
+        #mainSection {
+
+            #cvPresId,
+            #projectsId {
+                width: 85%;
+            }
+
+        }
+    }
 }

@@ -25,6 +25,9 @@ header#headerIndex h2 {
   color: #f0a500;
   text-shadow: 1px 1px 2px #061623;
 }
+header#headerIndex #headerMenu {
+  display: none;
+}
 header#headerIndex #headerHead {
   position: inherit;
   z-index: 2;
@@ -52,8 +55,8 @@ header#headerIndex #hexagomBg #hexagonIdSide div .hexagon {
   height: 34.64px;
   background-color: transparent;
   margin: 17.32px 0;
-  border-left: solid 5px #0040f0;
-  border-right: solid 5px #f05000;
+  border-left: solid 5px #000000;
+  border-right: solid 5px #000000;
 }
 header#headerIndex #hexagomBg #hexagonId div .hexagon:before,
 header#headerIndex #hexagomBg #hexagonId div .hexagon:after,
@@ -73,14 +76,14 @@ header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:after {
 header#headerIndex #hexagomBg #hexagonId div .hexagon:before,
 header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:before {
   top: -21.2132px;
-  border-top: solid 7.0711px #0040f0;
-  border-right: solid 7.0711px #f05000;
+  border-top: solid 7.0711px #000000;
+  border-right: solid 7.0711px #000000;
 }
 header#headerIndex #hexagomBg #hexagonId div .hexagon:after,
 header#headerIndex #hexagomBg #hexagonIdSide div .hexagon:after {
   bottom: -21.2132px;
-  border-bottom: solid 7.0711px #f05000;
-  border-left: solid 7.0711px #0040f0;
+  border-bottom: solid 7.0711px #000000;
+  border-left: solid 7.0711px #000000;
 }
 header#headerIndex #hexagomBg #hexagonIdSide {
   margin-left: -29px;
@@ -88,6 +91,7 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 
 #mainIndex #mainSection {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
 }
@@ -197,8 +201,43 @@ header#headerIndex #hexagomBg #hexagonIdSide {
   filter: blur(30px);
 }
 
+@media (max-width: 700px) {
+  body {
+    padding: 0;
+  }
+
+  header#headerIndex {
+    padding: 0;
+    animation: none;
+  }
+  header#headerIndex #headerMenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    padding: 2% 5%;
+    background-color: #081f30;
+  }
+  header#headerIndex #headerMenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header#headerIndex #headerMenu ul a {
+    color: #f0a500;
+  }
+  header#headerIndex #headerHead {
+    margin-top: 22%;
+  }
+
+  #mainIndex #mainSection #cvPresId,
+#mainIndex #mainSection #projectsId {
+    width: 85%;
+  }
+}
 #mainProjects {
-  padding: 0 10%;
+  padding: 25% 10% 0 10%;
 }
 #mainProjects #schoolProjetcs,
 #mainProjects #myProjetcs,
@@ -237,10 +276,10 @@ header#headerIndex #hexagomBg #hexagonIdSide {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 20px;
+  padding: 25% 10% 0 10%;
 }
 #bodyCv #mainCv #finishLoad {
-  background-color: #081f30;
+  background-color: #597c97;
   height: 30vh;
   border-radius: 10px;
   padding: 20px 40px;
@@ -375,11 +414,26 @@ a {
 /* ================= ENDS ================ */
 /* Desktops */
 /* Mobiles */
-@media (max-width: 767px) {
-  body {
-    padding: 12% 8%;
+@media (max-width: 700px) {
+  #headerMenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    padding: 2% 5%;
+    background-color: #081f30;
+  }
+  #headerMenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #headerMenu ul a {
+    color: #f0a500;
   }
 }
+/* ================= ENDS ================ */
 body {
   text-align: center;
   font-family: sans-serif;

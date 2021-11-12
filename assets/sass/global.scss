@@ -68,11 +68,29 @@ a {
 }
 
 /* Mobiles */
-@media (max-width: 767px) {
-    body {
-        padding: 12% 8%
+@media (max-width: 700px) {
+    #headerMenu {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 11;
+        padding: 2% 5%;
+        background-color: $colorBalise;
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            a {
+                color: $colorTxt;
+            }
+        }
     }
 }
+
+/* ================= ENDS ================ */
 
 body {
     text-align: center;
@@ -143,7 +161,8 @@ footer {
 
     article {
         width: 30%;
-        h4{
+
+        h4 {
             text-decoration: underline;
             margin-bottom: 15px;
         }

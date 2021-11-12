@@ -8,11 +8,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding-top: 20px;
+        padding: 25% 10% 0 10%;
 
         #finishLoad {
             // opacity: 0;
-            background-color: $colorBalise;
+            background-color: $colorBgLight;
             height: 30vh;
             border-radius: 10px;
             padding: 20px 40px;
