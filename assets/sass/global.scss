@@ -89,7 +89,26 @@ a {
         }
     }
 }
+#headerMenu {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 11;
+    padding: 2% 5%;
+    background-color: $colorBalise;
 
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        a {
+            color: $colorTxt;
+            
+        }
+    }
+}
 /* ================= ENDS ================ */
 
 body {

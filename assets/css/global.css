@@ -276,7 +276,10 @@ header#headerIndex #hexagomBg #hexagonIdSide {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 25% 10% 0 10%;
+  padding-top: 10%;
+}
+#bodyCv #mainCv section {
+  margin-bottom: 10px;
 }
 #bodyCv #mainCv #finishLoad {
   background-color: #597c97;
@@ -351,11 +354,14 @@ header#headerIndex #hexagomBg #hexagonIdSide {
   }
 }
 #bodyCv footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 
+@media (max-width: 700px) {
+  #bodyCv #mainCv {
+    padding: 25% 10% 0 10%;
+  }
+}
 /*  ============= WEB BROWSER RESETS ============ */
 * {
   margin: 0;
@@ -433,6 +439,24 @@ a {
     color: #f0a500;
   }
 }
+#headerMenu {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 11;
+  padding: 2% 5%;
+  background-color: #081f30;
+}
+#headerMenu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#headerMenu ul a {
+  color: #f0a500;
+}
+
 /* ================= ENDS ================ */
 body {
   text-align: center;
