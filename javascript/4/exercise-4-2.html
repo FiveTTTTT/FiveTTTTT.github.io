@@ -39,13 +39,14 @@
             numquam!</p>
 
         <div class="js-box">
-            <button onclick="sayHello()">Click to display greeting</button>
+            <button id="btnGreeting">Click to display greetings</button>
 
             <script>
                 function sayHello() {
                     window.alert("Welcome to my web page.");
                 }
-                
+                document.getElementById("btnGreeting").addEventListener("click", sayHello);
+
             </script>
 
         </div>
