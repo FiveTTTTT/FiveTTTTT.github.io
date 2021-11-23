@@ -275,38 +275,38 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #mainProjects #schoolProjetcs ul .dropbtn,
 #mainProjects #myProjetcs ul .dropbtn,
 #mainProjects #otherProjetcs ul .dropbtn {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #081f30;
+  color: #f0a500;
   padding: 16px;
   font-size: 16px;
   border: none;
-  width: 30%;
+  width: 100%;
 }
 #mainProjects #schoolProjetcs ul .dropdown,
 #mainProjects #myProjetcs ul .dropdown,
 #mainProjects #otherProjetcs ul .dropdown {
   position: relative;
   display: inline-block;
-  width: 100%;
+  width: 30%;
+  margin-bottom: 13px;
 }
 #mainProjects #schoolProjetcs ul .dropdown-content,
 #mainProjects #myProjetcs ul .dropdown-content,
 #mainProjects #otherProjetcs ul .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #334757;
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  width: 30%;
   /* Links inside the dropdown */
   /* Change color of dropdown links on hover */
 }
 #mainProjects #schoolProjetcs ul .dropdown-content a,
 #mainProjects #myProjetcs ul .dropdown-content a,
 #mainProjects #otherProjetcs ul .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
+  color: #f0a500;
+  padding: 12px 12px;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid black;
@@ -314,7 +314,7 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #mainProjects #schoolProjetcs ul .dropdown-content a:hover,
 #mainProjects #myProjetcs ul .dropdown-content a:hover,
 #mainProjects #otherProjetcs ul .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #597c97;
 }
 #mainProjects #schoolProjetcs ul .dropdown:hover .dropdown-content,
 #mainProjects #myProjetcs ul .dropdown:hover .dropdown-content,
@@ -324,7 +324,7 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #mainProjects #schoolProjetcs ul .dropdown:hover .dropbtn,
 #mainProjects #myProjetcs ul .dropdown:hover .dropbtn,
 #mainProjects #otherProjetcs ul .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #103b5c;
 }
 
 @media (max-width: 700px) {
