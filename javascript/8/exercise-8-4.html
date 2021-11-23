@@ -38,31 +38,35 @@
 
 <body>
     <div class="container col-md-8 offset-md-2">
-        <h1><b>Exercise 5-2</b>: JavaScript User Input</h1>
-        <p>This script captures and displays a value data entered by users.</p>
+        <h1><b>Exercise 8-4</b>: JavaScript Loops</h1>
+        <p>This script provides an example of a <i>do&#8230;while</i> loop.</p>
 
-        <h3>Redisplay User Input</h3>
-
+        <h3>Creating a simple <i>do&#8230;while</i> loop</h3>
         <div class="js-box">
 
-            <p>First Name: &nbsp;<input type="text" id="fName"></p>
-            <p><button onclick="showUserInput()">Show user input</button>
-                <button onclick="resetAll()">Reset All</button>
-            </p>
-
-            <p>You entered: </p>
-            <div id="resultBox"></div>
+            <script>
+                let i = 1;
+                do {
+                    document.write("This is loop step: <b>" + i + "<\/b>.<br>");
+                    i++;
+                }
+                while (i < -10);
+            </script>
 
         </div>
+
 
     </div>
     <div class="container col-md-8 offset-md-2">
         <h3>The exercices:</h3>
         <a href="../../projects.html">Go back to all my projects</a>
         <ul>
-            <li><a href="exercise-5-1.html">User Input: 5-1</a></li>
-            <li><a href="exercise-5-2.html">User Input: 5-2</a></li>
-            <li><a href="exercise-5-3.html">User Input: 5-3</a></li>
+            <a href=""></a>
+            <li><a href="exercise-8-1.html">Loops: 8-1</a></li>
+            <li><a href="exercise-8-2.html">Loops: 8-2</a></li>
+            <li><a href="exercise-8-3.html">Loops: 8-3</a></li>
+            <li><a href="exercise-8-4.html">Loops: 8-4</a></li>
+            <li><a href="exercise-8-5.html">Loops: 8-5</a></li>
         </ul>
     </div>
 
@@ -75,21 +79,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-    <script>
-        function showUserInput() {
-            /* Place the first name from the input field in a variable */
-            let userInput = document.getElementById("fName").value;
-            /* Display the value on the web page */
-            document.getElementById("resultBox").innerHTML = "<b>" + userInput + "<\/b>";
-
-            function resetAll() {
-                document.getElementById("fName").value = "";
-                document.getElementById("resultBox").innerHTML = "";
-            }
-        }
-    </script>
-
 </body>
 
 </html>
