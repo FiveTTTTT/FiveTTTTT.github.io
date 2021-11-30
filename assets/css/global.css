@@ -338,14 +338,18 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #bodyCv header {
   height: 70vh;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-around;
 }
 #bodyCv header article {
   width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #bodyCv header article img {
-  width: fit-content;
+  width: 50%;
+  border-radius: 100%;
 }
 #bodyCv header .headerTxt {
   display: flex;
