@@ -248,4 +248,98 @@ body {
     color: var(--black-000)
 }
 
-.theme-two { background-color: var(--gray-300) }
+.theme-two {
+    background-color: var(--gray-200)
+}
+
+.theme-two a.btn-primary:link {
+    color: var(--white-000)
+}
+
+.theme-two a.btn-primary:visited {
+    color: var(--white-000)
+}
+
+.theme-two a.btn-primary:link {
+    background-color: var(--black-000)
+}
+
+.theme-two a.btn-primary:visited {
+    background-color: var(--black-000)
+}
+
+.theme-two a.btn-primary:focus {
+    background-color: var(--gray-300)
+}
+
+.theme-two a.btn-primary:hover {
+    background-color: var(--gray-300)
+}
+
+.theme-two a.btn-primary:active {
+    background-color: var(--gray-300)
+}
+
+.theme-two a.btn-primary:focus {
+    background-color: var(--gray-600)
+}
+
+.theme-two a.btn-primary:hover {
+    background-color: var(--gray-600)
+}
+
+.theme-two a.btn-primary:active {
+    background-color: var(--gray-600)
+}
+
+.theme-two a.btn-primary:focus {
+    background-color: var(--gray-800)
+}
+
+.theme-two a.btn-primary:hover {
+    background-color: var(--gray-800)
+}
+
+.theme-two a.btn-primary:active {
+    background-color: var(--gray-800)
+}
+
+.theme-three {
+    background-color: white
+}
+
+.theme-three div.container-btn.text-center {
+    justify-content: left;
+}
+
+.theme-four {
+    background-color: var(--ontrend-500)
+}
+
+.theme-four .col-1 h2 {
+    color: var(--white-000)
+}
+
+.theme-four .col-1 h3 {
+    color: var(--green-100)
+}
+
+.theme-four .col-4 h3 {
+    color: var(--white-000)
+}
+
+.theme-four .col-4 p {
+    color: var(--white-000)
+}
+
+.theme-four .col-4 li {
+    color: var(--white-000)
+}
+
+.theme-four .col-4 figure.icon {
+    color: var(--white-000)
+}
+
+i:before{
+    color: var(--white-000)
+}
