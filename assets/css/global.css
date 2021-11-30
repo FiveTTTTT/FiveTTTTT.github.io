@@ -335,6 +335,24 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #bodyCv {
   position: relative;
 }
+#bodyCv header {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#bodyCv header article {
+  width: 40%;
+}
+#bodyCv header article img {
+  width: fit-content;
+}
+#bodyCv header .headerTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #bodyCv #mainCv {
   display: flex;
   justify-content: center;
