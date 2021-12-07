@@ -2,145 +2,176 @@
 
 #bodyCv {
     position: relative;
-    header{
-        height: 70vh;
-        display: flex;
-        // flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        article{
-            width: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img{
-                width: 50%;
-                border-radius: 100%;
-            }
+
+    header {
+
+        #headerMenu {
+            position: inherit;
         }
-        .headerTxt{
+
+        section:not(#headerMenu) {
+            height: 70vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-        }
-        .headerImg{
-            
+            justify-content: space-around;
+
+            article {
+                width: 40%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 40%;
+                    border-radius: 100%;
+                }
+            }
+
+            .headerTxt {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .headerImg {}
         }
 
     }
 
     #mainCv {
+        #pragramingKnowledge {
+            #programmingLangue {
+                path{
+                    fill: black;
+                }
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         padding-top: 10%;
-        section{
+
+        section {
             margin-bottom: 10px;
         }
-        
 
-        #finishLoad {
-            // opacity: 0;
-            background-color: $colorBgLight;
-            height: 30vh;
-            border-radius: 10px;
-            padding: 20px 40px;
-            animation: 5s ease-in 0s 1 hideTxt, 1s ease-in 5s 1 showTxt;
-            opacity: 1;
-        }
 
-        .loading {
-            position: relative;
-            width: 250px;
-            height: 250px;
+        // #finishLoad {
+        //     // opacity: 0;
+        //     background-color: $colorBgLight;
+        //     height: 30vh;
+        //     border-radius: 10px;
+        //     padding: 20px 40px;
+        //     animation: 5s ease-in 0s 1 hideTxt, 1s ease-in 5s 1 showTxt;
+        //     opacity: 1;
+        // }
 
-            h3 {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin: 0;
-                transform: translate(-50%, -50%);
-                animation: animateTxt 2s ease-in-out;
-                animation-iteration-count: 3;
-                animation-delay: -1s;
-            }
+        // .loading {
+        //     position: relative;
+        //     width: 250px;
+        //     height: 250px;
 
-            .blocks {
-                position: absolute;
-                width: 8px;
-                height: 25px;
-                background: $colorBaliseDark;
-                left: 50%;
-                border-radius: 8px;
-                transform: rotate(calc(18deg * var(--i)));
-                transform-origin: 0 125px;
-                animation: animate 1.9s ease-in-out;
-                animation-iteration-count: 2;
-                animation-delay: calc(0.05s * var(--i));
-            }
+        //     h3 {
+        //         position: absolute;
+        //         top: 50%;
+        //         left: 50%;
+        //         margin: 0;
+        //         transform: translate(-50%, -50%);
+        //         animation: animateTxt 2s ease-in-out;
+        //         animation-iteration-count: 3;
+        //         animation-delay: -1s;
+        //     }
 
-            @keyframes animate {
+        //     .blocks {
+        //         position: absolute;
+        //         width: 8px;
+        //         height: 25px;
+        //         background: $colorBaliseDark;
+        //         left: 50%;
+        //         border-radius: 8px;
+        //         transform: rotate(calc(18deg * var(--i)));
+        //         transform-origin: 0 125px;
+        //         animation: animate 1.9s ease-in-out;
+        //         animation-iteration-count: 2;
+        //         animation-delay: calc(0.05s * var(--i));
+        //     }
 
-                0%,
-                50% {
-                    background: $colorBaliseDark;
-                    box-shadow: none;
-                }
+        //     @keyframes animate {
 
-                50.1%,
-                100% {
-                    background: $colorTxt;
-                    box-shadow: 0 0 5px $colorTxt,
-                        0 0 15px $colorTxt,
-                        0 0 30px $colorTxt,
-                        0 0 60px $colorTxt,
-                        0 0 90px $colorTxt;
-                }
-            }
+        //         0%,
+        //         50% {
+        //             background: $colorBaliseDark;
+        //             box-shadow: none;
+        //         }
 
-            @keyframes animateTxt {
+        //         50.1%,
+        //         100% {
+        //             background: $colorTxt;
+        //             box-shadow: 0 0 5px $colorTxt,
+        //                 0 0 15px $colorTxt,
+        //                 0 0 30px $colorTxt,
+        //                 0 0 60px $colorTxt,
+        //                 0 0 90px $colorTxt;
+        //         }
+        //     }
 
-                0%,
-                50% {
-                    color: $colorBaliseDark;
-                    text-shadow: none;
-                }
+        //     @keyframes animateTxt {
 
-                50.1%,
-                100% {
-                    color: $colorTxt;
-                    text-shadow: 0 0 5px $colorTxt,
-                        0 0 15px $colorTxt,
-                        0 0 30px $colorTxt,
-                        0 0 60px $colorTxt,
-                        0 0 90px $colorTxt;
-                }
-            }
+        //         0%,
+        //         50% {
+        //             color: $colorBaliseDark;
+        //             text-shadow: none;
+        //         }
 
-            @keyframes hideTxt {
+        //         50.1%,
+        //         100% {
+        //             color: $colorTxt;
+        //             text-shadow: 0 0 5px $colorTxt,
+        //                 0 0 15px $colorTxt,
+        //                 0 0 30px $colorTxt,
+        //                 0 0 60px $colorTxt,
+        //                 0 0 90px $colorTxt;
+        //         }
+        //     }
 
-                0% {
-                    opacity: 0;
-                }
+        //     @keyframes hideTxt {
 
-                100% {
-                    opacity: 0;
-                }
-            }
+        //         0% {
+        //             opacity: 0;
+        //         }
 
-            @keyframes showTxt {
+        //         100% {
+        //             opacity: 0;
+        //         }
+        //     }
 
-                0% {
-                    opacity: 0;
-                }
+        //     @keyframes showTxt {
 
-                100% {
-                    opacity: 1;
-                }
-            }
-        }
+        //         0% {
+        //             opacity: 0;
+        //         }
+
+        //         100% {
+        //             opacity: 1;
+        //         }
+        //     }
+        // }
 
     }
 

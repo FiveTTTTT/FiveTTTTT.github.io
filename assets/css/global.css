@@ -335,23 +335,27 @@ header#headerIndex #hexagomBg #hexagonIdSide {
 #bodyCv {
   position: relative;
 }
-#bodyCv header {
+#bodyCv header #headerMenu {
+  position: inherit;
+}
+#bodyCv header section:not(#headerMenu) {
   height: 70vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-#bodyCv header article {
+#bodyCv header section:not(#headerMenu) article {
   width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#bodyCv header article img {
-  width: 50%;
+#bodyCv header section:not(#headerMenu) article img {
+  width: 40%;
   border-radius: 100%;
 }
-#bodyCv header .headerTxt {
+#bodyCv header section:not(#headerMenu) .headerTxt {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,80 +368,11 @@ header#headerIndex #hexagomBg #hexagonIdSide {
   flex-direction: column;
   padding-top: 10%;
 }
+#bodyCv #mainCv #pragramingKnowledge #programmingLangue path {
+  fill: black;
+}
 #bodyCv #mainCv section {
   margin-bottom: 10px;
-}
-#bodyCv #mainCv #finishLoad {
-  background-color: #597c97;
-  height: 30vh;
-  border-radius: 10px;
-  padding: 20px 40px;
-  animation: 5s ease-in 0s 1 hideTxt, 1s ease-in 5s 1 showTxt;
-  opacity: 1;
-}
-#bodyCv #mainCv .loading {
-  position: relative;
-  width: 250px;
-  height: 250px;
-}
-#bodyCv #mainCv .loading h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0;
-  transform: translate(-50%, -50%);
-  animation: animateTxt 2s ease-in-out;
-  animation-iteration-count: 3;
-  animation-delay: -1s;
-}
-#bodyCv #mainCv .loading .blocks {
-  position: absolute;
-  width: 8px;
-  height: 25px;
-  background: #061623;
-  left: 50%;
-  border-radius: 8px;
-  transform: rotate(calc(18deg * var(--i)));
-  transform-origin: 0 125px;
-  animation: animate 1.9s ease-in-out;
-  animation-iteration-count: 2;
-  animation-delay: calc(0.05s * var(--i));
-}
-@keyframes animate {
-  0%, 50% {
-    background: #061623;
-    box-shadow: none;
-  }
-  50.1%, 100% {
-    background: #f0a500;
-    box-shadow: 0 0 5px #f0a500, 0 0 15px #f0a500, 0 0 30px #f0a500, 0 0 60px #f0a500, 0 0 90px #f0a500;
-  }
-}
-@keyframes animateTxt {
-  0%, 50% {
-    color: #061623;
-    text-shadow: none;
-  }
-  50.1%, 100% {
-    color: #f0a500;
-    text-shadow: 0 0 5px #f0a500, 0 0 15px #f0a500, 0 0 30px #f0a500, 0 0 60px #f0a500, 0 0 90px #f0a500;
-  }
-}
-@keyframes hideTxt {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes showTxt {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 #bodyCv footer {
   width: 100%;
@@ -546,7 +481,7 @@ a {
 /* ================= ENDS ================ */
 body {
   text-align: center;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #334757;
 }
 
