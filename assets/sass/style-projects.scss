@@ -94,5 +94,17 @@
 @media (max-width: 700px) {
     #mainProjects {
         padding: 25% 10% 10% 10%;
+
+        #schoolProjetcs,
+        #myProjetcs,
+        #otherProjetcs {
+            ul {
+
+                .dropdown {
+                    width: 100%;
+                }
+            }
+        }
     }
+
 }

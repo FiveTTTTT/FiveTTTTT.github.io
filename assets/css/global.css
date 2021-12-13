@@ -331,6 +331,11 @@ header#headerIndex #hexagomBg #hexagonIdSide {
   #mainProjects {
     padding: 25% 10% 10% 10%;
   }
+  #mainProjects #schoolProjetcs ul .dropdown,
+#mainProjects #myProjetcs ul .dropdown,
+#mainProjects #otherProjetcs ul .dropdown {
+    width: 100%;
+  }
 }
 #bodyCv {
   position: relative;
